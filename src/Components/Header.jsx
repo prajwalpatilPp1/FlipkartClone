@@ -1,5 +1,6 @@
 import { AppBar, styled, Toolbar, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
+import Search from './Search';
 
 const StyledHeader = styled(AppBar)`
   background: #2874f0;
@@ -29,7 +30,7 @@ function Header() {
     const subURL='https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png'
     return (
         <StyledHeader>
-            <Toolbar>
+            <Toolbar style={{ minHeight: 55 }   }>
                 <Component >
                     <img src={logoURL} alt="logo" style={{ width: 75 }} />
                     <Box component="span" style={{ display: 'flex'}}>
@@ -41,6 +42,7 @@ function Header() {
                     </Box>
 
                 </Component>
+                <Search/>
             </Toolbar>
         </StyledHeader>
     );
